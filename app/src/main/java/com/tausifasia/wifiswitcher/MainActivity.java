@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         enableButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 wifi.setWifiEnabled(true);
             }
         });
 
         disableButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                WifiManager wifi = (WifiManager)  getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 wifi.setWifiEnabled(false);
             }
         });
